@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+
+
+    <div n-widgetAction="main" class="main-widget">
+
+        <div class="widgit-wrapper">
+
+            <div class="widgit-header">
+                <h1 class="widgit-header-txt" id="widgit-header-txt">Browse and download free desktop wallpapers</h1>
+
+                <div class="widgit-header-menus" id="widgit-header-menus">
+                    <button class="btn back-btn" id="back-btn">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11"
+                                fill="none">
+                                <path d="M5 1.5L1 5.5L5 9.5" stroke="#016CFF" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="txt">Back</span>
+                    </button>
+
+                    <div class="filter-container">
+                        <div class="custom-dropdown">
+                            <div class="custom-dropdown-btn" id="dropdown-toggle">
+                                <span class="icon">
+                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.50487 10.7501L1.99487 8.24512" stroke="#787878"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.50488 2.25V10.75" stroke="#787878" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.49512 2.25L10.0051 4.755" stroke="#787878" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.49512 10.75V2.25" stroke="#787878" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="txt">
+                                    Sort by <span class="selected-filter" id="order-by-text"> Latest</span>
+                                </span>
+                                <span class="icon carat">
+                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.38181 0H3.82198H0.616412C0.0678664 0 -0.206406 0.758914 0.182147 1.20379L3.14201 4.59274C3.61627 5.13575 4.38767 5.13575 4.86193 4.59274L5.98759 3.30389L7.82179 1.20379C8.20463 0.758914 7.93036 0 7.38181 0Z"
+                                            fill="#787878" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="drop-content slide-up" id="dropdown-content">
+                                <span class="short-by-text">Sort by</span>
+                                <ul class="custom-dropdown-menu-container">
+                                    <li class="custom-dropdown-menu active" data-order="latest">
+                                        <span class="icon check">
+                                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5L3.66353 8L9 1" stroke="#1B1B1B" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span class="txt" id="order-by-text">
+                                            latest
+                                        </span>
+                                    </li>
+                                    <li class="custom-dropdown-menu" data-order="oldest">
+                                        <span class="icon check">
+                                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5L3.66353 8L9 1" stroke="#1B1B1B" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span class="txt">
+                                            oldest
+                                        </span>
+                                    </li>
+                                    <li class="custom-dropdown-menu" data-order="popular">
+                                        <span class="icon check">
+                                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5L3.66353 8L9 1" stroke="#1B1B1B" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span class="txt">
+                                            popular
+                                        </span>
+                                    </li>
+                                    <li class="custom-dropdown-menu" data-order="views">
+                                        <span class="icon check">
+                                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5L3.66353 8L9 1" stroke="#1B1B1B" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span class="txt">
+                                            views
+                                        </span>
+                                    </li>
+                                    <li class="custom-dropdown-menu" data-order="download">
+                                        <span class="icon check">
+                                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5L3.66353 8L9 1" stroke="#1B1B1B" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span class="txt">
+                                            downloads
+                                        </span>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selected-category-container" id="selected-category-container"></div>
+
+                <label for="search-image" class="searchbar-image-container">
+                    <input type="search" value="" placeholder="Search" class="search-image" id="search-image">
+                    <span class="search-icon" id="search-submit-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.66671 13.9997C11.1645 13.9997 14 11.1641 14 7.66634C14 4.16854 11.1645 1.33301 7.66671 1.33301C4.1689 1.33301 1.33337 4.16854 1.33337 7.66634C1.33337 11.1641 4.1689 13.9997 7.66671 13.9997Z"
+                                stroke="#787878" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14.6667 14.6663L13.3334 13.333" stroke="#787878" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </label>
+
+            </div>
+
+
+            <!-- category  -->
+            <div class="category-container" id='category-container'>
+                <!-- screen 1 -->
+                <div class="category-content" id="category-content"></div>
+                <div class="loader " id="category-loader">
+                    <div class="preview-file-loder">
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                    </div>
+                </div>
+                <div class="no-more-data no-more-topic-data" id="no-more-topic">No more Topic</div>
+            </div>
+
+            <!-- category image  -->
+            <div class="category-image-container" id='category-image-container'>
+                <!-- screen 2 -->
+                <div class="category-image-content" id="category-image-content"></div>
+                <div class="loader" id="category-image-loader">
+                    <div class="preview-file-loder">
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                    </div>
+                </div>
+                <div class="no-more-data no-more-category-image" id="no-more-category-image">No more Images</div>
+            </div>
+
+            <!-- search image  -->
+            <div class="search-image-container" id='search-image-container'>
+                <!-- screen 3 -->
+                <div class="search-image-content" id="search-image-content"></div>
+                <div class="loader" id="search-image-loader">
+                    <div class="preview-file-loder">
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                    </div>
+                </div>
+                <div class="no-more-data no-more-search-image" id="no-more-search-image">No more Images</div>
+                <div class="error-container" id="search-error-container">
+                    <div class="result-error">
+                        <div class="image-container">
+                            <svg width="72" height="72" viewBox="0 0 72 72" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_124_1107)">
+                                    <path
+                                        d="M61.1243 69.7586H57.5352C56.9363 69.7586 56.4508 69.2731 56.4508 68.6742C56.4508 68.0753 56.9363 67.5898 57.5352 67.5898H61.1243C61.7233 67.5898 62.2087 68.0753 62.2087 68.6742C62.2086 69.2731 61.7233 69.7586 61.1243 69.7586ZM51.7923 69.7586H48.2032C47.6042 69.7586 47.1188 69.2731 47.1188 68.6742C47.1188 68.0753 47.6042 67.5898 48.2032 67.5898H51.7923C52.3913 67.5898 52.8767 68.0753 52.8767 68.6742C52.8767 69.2731 52.3913 69.7586 51.7923 69.7586ZM42.4605 69.7586H38.8711C38.2722 69.7586 37.7868 69.2731 37.7868 68.6742C37.7868 68.0753 38.2722 67.5898 38.8711 67.5898H42.4605C43.0594 67.5898 43.5448 68.0753 43.5448 68.6742C43.5448 69.2731 43.0594 69.7586 42.4605 69.7586ZM33.1286 69.7586H29.5394C28.9405 69.7586 28.455 69.2731 28.455 68.6742C28.455 68.0753 28.9405 67.5898 29.5394 67.5898H33.1286C33.7275 67.5898 34.2129 68.0753 34.2129 68.6742C34.2128 69.2731 33.7275 69.7586 33.1286 69.7586ZM23.7966 69.7586H20.2074C19.6085 69.7586 19.123 69.2731 19.123 68.6742C19.123 68.0753 19.6085 67.5898 20.2074 67.5898H23.7966C24.3955 67.5898 24.8809 68.0753 24.8809 68.6742C24.8809 69.2731 24.3955 69.7586 23.7966 69.7586ZM14.4647 69.7586H10.8754C10.2765 69.7586 9.79102 69.2731 9.79102 68.6742C9.79102 68.0753 10.2765 67.5898 10.8754 67.5898H14.4647C15.0636 67.5898 15.549 68.0753 15.549 68.6742C15.549 69.2731 15.0636 69.7586 14.4647 69.7586Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M3.32557 62.2087C2.72665 62.2087 2.24121 61.7233 2.24121 61.1243V57.5352C2.24121 56.9363 2.72665 56.4508 3.32557 56.4508C3.92449 56.4508 4.40993 56.9363 4.40993 57.5352V61.1243C4.40993 61.7233 3.92449 62.2087 3.32557 62.2087ZM3.32557 52.8767C2.72665 52.8767 2.24121 52.3913 2.24121 51.7923V48.2032C2.24121 47.6042 2.72665 47.1188 3.32557 47.1188C3.92449 47.1188 4.40993 47.6042 4.40993 48.2032V51.7923C4.40993 52.3913 3.92449 52.8767 3.32557 52.8767ZM3.32557 43.5448C2.72665 43.5448 2.24121 43.0594 2.24121 42.4604V38.8711C2.24121 38.2722 2.72665 37.7868 3.32557 37.7868C3.92449 37.7868 4.40993 38.2722 4.40993 38.8711V42.4604C4.40993 43.0594 3.92449 43.5448 3.32557 43.5448ZM3.32557 34.2128C2.72665 34.2128 2.24121 33.7274 2.24121 33.1284V29.5393C2.24121 28.9403 2.72665 28.4549 3.32557 28.4549C3.92449 28.4549 4.40993 28.9403 4.40993 29.5393V33.1284C4.40993 33.7275 3.92449 34.2128 3.32557 34.2128ZM3.32557 24.8811C2.72665 24.8811 2.24121 24.3956 2.24121 23.7967V20.2074C2.24121 19.6085 2.72665 19.123 3.32557 19.123C3.92449 19.123 4.40993 19.6085 4.40993 20.2074V23.7967C4.40993 24.3956 3.92449 24.8811 3.32557 24.8811ZM3.32557 15.549C2.72665 15.549 2.24121 15.0636 2.24121 14.4647V10.8754C2.24121 10.2765 2.72665 9.79102 3.32557 9.79102C3.92449 9.79102 4.40993 10.2765 4.40993 10.8754V14.4647C4.40993 15.0636 3.92449 15.549 3.32557 15.549Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M61.1243 4.40993H57.535C56.9361 4.40993 56.4507 3.92449 56.4507 3.32557C56.4507 2.72665 56.9361 2.24121 57.535 2.24121H61.1243C61.7233 2.24121 62.2087 2.72665 62.2087 3.32557C62.2087 3.92449 61.7233 4.40993 61.1243 4.40993ZM51.7923 4.40993H48.2032C47.6042 4.40993 47.1188 3.92449 47.1188 3.32557C47.1188 2.72665 47.6042 2.24121 48.2032 2.24121H51.7923C52.3913 2.24121 52.8767 2.72665 52.8767 3.32557C52.8767 3.92449 52.3913 4.40993 51.7923 4.40993ZM42.4603 4.40993H38.8711C38.2722 4.40993 37.7868 3.92449 37.7868 3.32557C37.7868 2.72665 38.2722 2.24121 38.8711 2.24121H42.4603C43.0592 2.24121 43.5447 2.72665 43.5447 3.32557C43.5447 3.92449 43.0592 4.40993 42.4603 4.40993ZM33.1286 4.40993H29.5393C28.9403 4.40993 28.4549 3.92449 28.4549 3.32557C28.4549 2.72665 28.9403 2.24121 29.5393 2.24121H33.1286C33.7275 2.24121 34.2129 2.72665 34.2129 3.32557C34.2129 3.92449 33.7275 4.40993 33.1286 4.40993ZM23.7966 4.40993H20.2074C19.6085 4.40993 19.123 3.92449 19.123 3.32557C19.123 2.72665 19.6085 2.24121 20.2074 2.24121H23.7966C24.3955 2.24121 24.8809 2.72665 24.8809 3.32557C24.8809 3.92449 24.3955 4.40993 23.7966 4.40993ZM14.4645 4.40993H10.8754C10.2765 4.40993 9.79102 3.92449 9.79102 3.32557C9.79102 2.72665 10.2765 2.24121 10.8754 2.24121H14.4645C15.0635 2.24121 15.5489 2.72665 15.5489 3.32557C15.5489 3.92449 15.0635 4.40993 14.4645 4.40993Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M68.6742 62.2087C68.0753 62.2087 67.5898 61.7233 67.5898 61.1243V57.535C67.5898 56.9361 68.0753 56.4507 68.6742 56.4507C69.2731 56.4507 69.7586 56.9361 69.7586 57.535V61.1243C69.7586 61.7233 69.2731 62.2087 68.6742 62.2087ZM68.6742 52.8767C68.0753 52.8767 67.5898 52.3913 67.5898 51.7923V48.203C67.5898 47.6041 68.0753 47.1187 68.6742 47.1187C69.2731 47.1187 69.7586 47.6041 69.7586 48.203V51.7923C69.7586 52.3913 69.2731 52.8767 68.6742 52.8767ZM68.6742 43.5447C68.0753 43.5447 67.5898 43.0592 67.5898 42.4603V38.8711C67.5898 38.2722 68.0753 37.7868 68.6742 37.7868C69.2731 37.7868 69.7586 38.2722 69.7586 38.8711V42.4603C69.7586 43.0592 69.2731 43.5447 68.6742 43.5447ZM68.6742 34.2128C68.0753 34.2128 67.5898 33.7274 67.5898 33.1284V29.5391C67.5898 28.9402 68.0753 28.4548 68.6742 28.4548C69.2731 28.4548 69.7586 28.9402 69.7586 29.5391V33.1284C69.7586 33.7275 69.2731 34.2128 68.6742 34.2128ZM68.6742 24.8809C68.0753 24.8809 67.5898 24.3955 67.5898 23.7966V20.2074C67.5898 19.6085 68.0753 19.123 68.6742 19.123C69.2731 19.123 69.7586 19.6085 69.7586 20.2074V23.7966C69.7586 24.3955 69.2731 24.8809 68.6742 24.8809ZM68.6742 15.5489C68.0753 15.5489 67.5898 15.0635 67.5898 14.4645V10.8754C67.5898 10.2765 68.0753 9.79102 68.6742 9.79102C69.2731 9.79102 69.7586 10.2765 69.7586 10.8754V14.4645C69.7586 15.0635 69.2731 15.5489 68.6742 15.5489Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M68.5364 6.86812C70.4329 6.86812 71.9704 5.33064 71.9704 3.43406C71.9704 1.53748 70.4329 0 68.5364 0C66.6398 0 65.1023 1.53748 65.1023 3.43406C65.1023 5.33064 66.6398 6.86812 68.5364 6.86812Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M3.46336 6.86812C5.35994 6.86812 6.89742 5.33064 6.89742 3.43406C6.89742 1.53748 5.35994 0 3.46336 0C1.56678 0 0.0292969 1.53748 0.0292969 3.43406C0.0292969 5.33064 1.56678 6.86812 3.46336 6.86812Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M68.5364 72C70.4329 72 71.9704 70.4625 71.9704 68.5659C71.9704 66.6693 70.4329 65.1318 68.5364 65.1318C66.6398 65.1318 65.1023 66.6693 65.1023 68.5659C65.1023 70.4625 66.6398 72 68.5364 72Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M3.46336 72C5.35994 72 6.89742 70.4625 6.89742 68.5659C6.89742 66.6693 5.35994 65.1318 3.46336 65.1318C1.56678 65.1318 0.0292969 66.6693 0.0292969 68.5659C0.0292969 70.4625 1.56678 72 3.46336 72Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M60.7683 62.3349H11.231C9.70343 62.3349 8.46509 61.0965 8.46509 59.5689V12.432C8.46509 10.9044 9.70343 9.66602 11.231 9.66602H60.7683C62.2959 9.66602 63.5343 10.9044 63.5343 12.432V59.5689C63.5343 61.0965 62.2959 62.3349 60.7683 62.3349Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M63.5343 12.432V59.5695C63.5343 61.0966 62.2951 62.3344 60.768 62.3344H56.7212C58.2484 62.3344 59.4862 61.0968 59.4862 59.5695V12.432C59.4862 10.9048 58.2485 9.66699 56.7212 9.66699H60.768C62.2951 9.66699 63.5343 10.9046 63.5343 12.432Z"
+                                        fill="#DEDEDE" />
+                                    <path
+                                        d="M31.7417 40.4466L44.8859 32.9378C46.5799 31.9702 48.6692 32.0149 50.3201 33.0542L63.5342 41.3733V59.5692C63.5342 61.0968 62.2959 62.3352 60.7682 62.3352H31.7417V40.4466Z"
+                                        fill="#D4D4D4" />
+                                    <path
+                                        d="M63.5343 41.3737V59.5696C63.5343 61.0968 62.2951 62.3346 60.768 62.3346H56.7212C58.2484 62.3346 59.4862 61.097 59.4862 59.5696V38.8252L63.5343 41.3737Z"
+                                        fill="#C7C7C7" />
+                                    <path
+                                        d="M8.46523 36.0002L20.1551 29.5474C21.9979 28.5302 24.2687 28.7042 25.9349 29.9902L48.7764 47.6191C50.3875 48.8625 51.3311 50.7827 51.3311 52.8179V62.3347H11.231C9.70343 62.3347 8.46509 61.0963 8.46509 59.5687V36.0002H8.46523Z"
+                                        fill="#A0A0A0" />
+                                    <path
+                                        d="M51.3318 49.5904V62.3343H46.0688V54.6338C46.0688 52.5105 45.0844 50.5073 43.4035 49.21L20.6724 31.6672C19.9378 31.1002 19.0873 30.7496 18.2063 30.6231L20.1558 29.547C21.9985 28.5304 24.2681 28.7041 25.9356 29.9905L51.3318 49.5904Z"
+                                        fill="#9B9B9B" />
+                                    <path
+                                        d="M50.823 25.916C53.8182 25.916 56.2463 23.4879 56.2463 20.4927C56.2463 17.4975 53.8182 15.0693 50.823 15.0693C47.8278 15.0693 45.3997 17.4975 45.3997 20.4927C45.3997 23.4879 47.8278 25.916 50.823 25.916Z"
+                                        fill="#C0C0C0" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_124_1107">
+                                        <rect width="72" height="72" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p>
+                            Sorry, no results found! Please try searching for something else.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="preview popup" id="preview">
+        <div class="overlay"></div>
+        <div class="popup-content-container" id="popup-content-container">
+            <div class="preview-content" id="preview-content"></div>
+            <span class="close-preview" id="close-preview">
+                <svg width="72" height="48" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_124_1818)">
+                        <rect x="12" y="6" width="48" height="48" rx="24" fill="white" />
+                    </g>
+                    <path d="M30 36L42 24" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M42 36L30 24" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <defs>
+                        <filter id="filter0_d_124_1818" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="6" />
+                            <feGaussianBlur stdDeviation="6" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_124_1818" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_124_1818"
+                                result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+
+            </span>
+        </div>
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
